@@ -124,5 +124,5 @@ jobs:
         run: |
           cd ${{ env.CHANNEL_DIR }}
           git add .
-          git commit -m "Release ${{ github.ref_name }} for noarch" || true
+          git commit -m "chore(conda): Publish ${{ github.ref_name }} for ${{ matrix.platform }}" || true
           git push "https://x-access-token:${{ secrets.CHANNEL_TOKEN }}@github.com/${{ secrets.CHANNEL_USERNAME }}/${{ env.CHANNEL_REPO }}.git"
