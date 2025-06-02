@@ -51,7 +51,7 @@ To implement automated publication of Conda packages to this channel:
    - `CHANNEL_USERNAME`: GitHub username associated with the token, i.e. `esther-poniatowski`.
 
 4. Implement a GitHub Action Workflow:
-   Define a workflow (e.g., `.github/workflows/build-deploy.yml`), following the template provided in `templates/build-deploy.yml`. 
+   Define a workflow (e.g., `.github/workflows/publish.yml`), following the appropriate template provided in `templates/` (platform-specific or "noarch"). 
    This workflow must:
 
    - Build the package for the required platforms using `conda-build`.
